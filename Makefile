@@ -75,6 +75,9 @@ install-kbdus: kbdus.ko
 	install -D -m 644 -t $(KBDUS_HEADER_INSTALL_DIR) kbdus/include/kbdus.h
 	depmod # this may take some time
 
+install-kbdus-header: 
+	install -D -m 644 -t $(KBDUS_HEADER_INSTALL_DIR) kbdus/include/kbdus.h
+
 .PHONY: install-libbdus
 install-libbdus: libbdus.so
 	install -D -m 644 -t $(LIBBDUS_BINARY_INSTALL_DIR) libbdus.so
